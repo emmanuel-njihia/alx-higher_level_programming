@@ -1,12 +1,15 @@
+
+# 100-matrix_mul.txt
+
 ============================
-Using 100-matrix_mul.py
+How to Use 100-matrix_mul.py
 ============================
 
-This defines a matrix multiplication function ``matrix_mul(m_a, m_b)``.
+This module defines a matrix multiplication function ``matrix_mul(m_a, m_b)``.
 
-Usecase
+Usage
 =====
-``matrix_mul(...)`` returns a new matrix of the multiplication of
+``matrix_mul(...)`` returns a new matrix representing the multiplication of
 ``m_a`` by ``m_b``.
 
 ::
@@ -30,7 +33,8 @@ Usecase
     >>> print(matrix_mul(m_a, m_b))
     [[13, 16]]
 
-The function works with floating-point numbers.
+The function also works with floating-point numbers.
+
 ::
 
     >>> m_a = [
@@ -45,7 +49,7 @@ The function works with floating-point numbers.
     >>> print(matrix_mul(m_a, m_b))
     [[34.69, 55.44000000000001], [-78.61, 29.018000000000008]]
 
-Integers and floats can also be combined.
+Integers and floats can be combined.
 
 ::
 
@@ -62,8 +66,7 @@ Integers and floats can also be combined.
     >>> print(matrix_mul(m_a, m_b))
     [[73.03999999999999, 84.5, 95.4], [166.58800000000002, 195.8, 223.74]]
 
-must have a minimum of two arguments must be provided.
-Otherwise, a TypeError is raised.
+A minimum of two arguments must be provided. Otherwise, a TypeError is raised.
 
 ::
 
@@ -82,7 +85,8 @@ Otherwise, a TypeError is raised.
 ValueErrors
 ===========
 
-If two matrices can't be multiplied a ValueError is raised.
+If two matrices cannot be multiplied (ie. the row count of ``m_a`` is not
+equal to the column count in ``m_b``), a ValueError is raised.
 
 ::
 
@@ -99,8 +103,9 @@ If two matrices can't be multiplied a ValueError is raised.
     Traceback (most recent call last):
     ValueError: m_a and m_b can't be multiplied
 
-The parameters ``m_a`` and ``m_b`` cannot be empty.
-Otherwise, ValueError is raised.
+
+The parameters ``m_a`` and ``m_b`` cannot be empty. Otherwise, a ValueError
+is raised.
 
 ::
 
@@ -123,8 +128,8 @@ Otherwise, ValueError is raised.
 Invalid Matrices
 ================
 
-The parameters ``m_a`` and ``m_b`` must be lists.
-otherwise, a TypeError is raised.
+The parameters ``m_a`` and ``m_b`` must be lists. If either parameter is
+not a list, a TypeError is raised.
 
 ::
 
@@ -150,7 +155,7 @@ otherwise, a TypeError is raised.
     Traceback (most recent call last):
     TypeError: m_a must be a list
 
-they *must* be lists of lists!
+Not just any list - they *must* be lists of lists!
 
 ::
 
@@ -169,7 +174,8 @@ they *must* be lists of lists!
     >>> print(matrix_mul([1, 2], [3, 4]))
     Traceback (most recent call last):
     TypeError: m_a must be a list of lists
-they *must* be lists of lists containing
+
+And not just any list of lists - they *must* be lists of lists containing
 integers or floats!
 
 ::
@@ -190,8 +196,8 @@ integers or floats!
     Traceback (most recent call last):
     TypeError: m_a should contain only integers or floats
 
-the length of all rows in matrices ``m_a`` and ``m_b`` should be
-same. Otherwise, a TypeError is raised.
+Finally, the length of all rows in matrices ``m_a`` and ``m_b`` should be
+equivalent. Otherwise, a TypeError is raised.
 
 ::
 
@@ -231,3 +237,4 @@ same. Otherwise, a TypeError is raised.
     >>> print(matrix_mul(m_a, m_b))
     Traceback (most recent call last):
     TypeError: each row of m_a must should be of the same size
+

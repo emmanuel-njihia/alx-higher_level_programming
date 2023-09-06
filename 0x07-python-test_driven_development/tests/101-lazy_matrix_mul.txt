@@ -1,3 +1,18 @@
+# 101-lazy_matrix_mul.txt
+
+=================================
+How to Use 101-lazy_matrix_mul.py
+=================================
+
+This module defines a matrix multiplication function
+``lazy_matrix_mul(m_a, m_b)``.
+
+Usage
+=====
+
+``lazy_matrix_mul(...)`` returns a new matrix representing the multiplication
+of ``m_a`` by ``m_b``.
+
 ::
 
     >>> lazy_matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
@@ -49,7 +64,7 @@ A minimum of two arguments must be provided.
 
     >>> print(lazy_matrix_mul()) # doctest: +NORMALIZE_WHITESPACE
     Traceback (most recent call last):
-    TypeError: lazy_matrix_mul() missing 2 required positional arguments:
+    TypeError: lazy_matrix_mul() missing 2 required positional arguments: 
     'm_a' and 'm_b'
 
 ValueErrors
@@ -202,3 +217,4 @@ equivalent. Otherwise, a ValueError is raised.
     >>> print(lazy_matrix_mul(m_a, m_b))
     Traceback (most recent call last):
     ValueError: setting an array element with a sequence.
+
