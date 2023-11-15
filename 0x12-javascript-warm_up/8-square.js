@@ -1,20 +1,17 @@
 #!/usr/bin/node
-const size = parseInt(process.argv[2]);
-if (!isNaN(size)) {
-	if (size > 0) {
-		for (let p = 0; p < size; p++) {
-			let line = '';
-			for (let q = 0; q < size; q++) {
-				line += 'X';
-			}
-			console.log(line);
-		}
-	} else {
-		console.log('Size must be a positive integer');
-	}
+const { argv } = require('process');
+
+if (isNaN(Number(argv[2]))) {
+  console.log('Missing size');
 } else {
-	console.log('Size must be a positive integer');
-}
-} else {
-	console.log('Missing size');
+  let i = 1;
+  const x = argv[2];
+  for (i; i <= x; i++) {
+    let j = 1;
+    while (j <= x) {
+      process.stdout.write('X');
+      j++;
+    }
+    console.log();
+  }
 }
