@@ -1,8 +1,7 @@
 #!/usr/bin/node
-const listOne = require('./100-data').list;
-const ListTwo = list.map(function (number, index) {
-  return number * index;
+const list = require('./100-data').list;
+const newList = list.map(function (num, index) {
+  return num * index;
 });
-
-console.log(listOne);
-console.log(ListTwo);
+console.log(list);
+console.log(newList);
